@@ -61,7 +61,7 @@ export function start(script: string, jsonConfigFile: string, errback: ErrProcCa
 /**
  * Disconnects from the pm2 daemon.
  */
-export function disconnect(): void;
+export function disconnect(errBack: ErrCallback): void;
 
 /**
  * Stops a process but leaves the process meta-data in pm2’s list
