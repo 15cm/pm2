@@ -61,6 +61,11 @@ export function start(script: string, jsonConfigFile: string, errback: ErrProcCa
 /**
  * Disconnects from the pm2 daemon.
  */
+export function disconnect(): void;
+/**
+ * Disconnects from the pm2 daemon.
+ * @param errback - Called when finished disconnecting from the pm2 daemon process.
+ */
 export function disconnect(errBack: ErrCallback): void;
 
 /**
@@ -422,7 +427,7 @@ export interface StartOptions {
 
 interface ReloadOptions {
   /**
-   * (Default: false) If true is passed in, pm2 will reload it’s environment from process.env 
+   * (Default: false) If true is passed in, pm2 will reload it’s environment from process.env
    * before reloading your process.
    */
   updateEnv?: boolean;
